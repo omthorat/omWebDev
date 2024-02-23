@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import Navlinks from "../navlinks/Navlinks"
 import {motion} from "framer-motion"
+import Image from "next/image"
 const Navbar=()=>{
     const [open ,setOpen]= useState(false)
     
@@ -65,15 +66,16 @@ const Navbar=()=>{
     return(
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 xlg:px-48 ">
        
-       <div className="hidden md:flex flex-row gap-4  text-xl w-1/3 z-40">
+       <div className="hidden md:flex flex-row gap-4  text-xl w-1/3 ">
         {
             menu.map((link)=>(<Navlinks link={link}/>))
         }
        </div>
-        <div className="md:hidden lg:flex">
-        <Link href='/' className="text-sm bg-red-500  shadow-lg rounded-md px-2 pr-1 py-1 flex flex-row font-semibold ">
-            <span className="text-white text-lg flex items-center justify-center p-1">Omkar</span>
-            <span className="bg-white rounded-md text-lg p-1">.Dev</span>
+        <div className="md:hidden xl:flex">
+        <Link href='/' className="text-sm  rounded-md px-2 pr-1 py-1 flex flex-row font-semibold ">
+            {/* <span className="text-white text-lg flex items-center justify-center p-1">Omkar</span>
+            <span className="bg-white rounded-md text-lg p-1">.Dev</span> */}
+            <Image src="/logo-removebg-preview (1).png" width={300} height={100}/>
             </Link>
         </div>
 
