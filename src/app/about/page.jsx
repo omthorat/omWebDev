@@ -1,5 +1,5 @@
 "use client";
-import Brain from "@/components/brain";
+import Brain from "../../components/Brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -24,28 +24,26 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-full overflow-y-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-35 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-35 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:pr-0 ">
           {/* SUMMARY CONTAINER */}
-          <div className="flex flex-col gap-8 justify-center">
+          <div className="flex flex-row gap-8 justify-center">
             {/* SUMMARY IMAGE */}
             <Image src="/profile.png" width={300} height={250} className="rounded-xl"/>
             {/* SUMMARY TITLE */}
+            <div className="flex flex-col gap-12">
             <h1 className="font-bold text-2xl">SUMMARY</h1>
             {/* SUMMARY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+            Full Stack Software Developer with Expertise in  both frontend and backend development. Proven expertise in crafting end-to-end (e2e) applications, demonstrating a track record of successfully navigating the complexities of the software development lifecycle. Adept at collaborating with diverse teams to develop cross-functional applications that seamlessly integrate frontend and backend components. Experienced in leading small teams, fostering innovation, and ensuring the delivery of high-quality solutions.
             </p>
+            </div>
             {/* SUMMARY QUOTE */}
             <span className="italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
             {/* Summary SCROLL SVG */}
-            <motion.svg
+            {/* <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -66,7 +64,7 @@ const AboutPage = () => {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-            </motion.svg>
+            </motion.svg> */}
           </div>
           {/* SKILLS CONTAINER */}
           <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
@@ -74,25 +72,32 @@ const AboutPage = () => {
             <motion.h1
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
-              transition={{ delay: 0.2 }}
+              transition={{ delay:0.5}}
               className="font-bold text-2xl"
             >
               SKILLS
             </motion.h1>
             {/* SKILL LIST */}
             <motion.div
-              initial={{ x: "-300px" }}
+              initial={{ x: "-1300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{delay: 1}}
               className="flex gap-4 flex-wrap"
             >
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                HTML5
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                CSS3
+              </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                TypeScript
+                React.js
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                React.js
+                TypeScript
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Next.js
@@ -104,16 +109,13 @@ const AboutPage = () => {
                 Tailwind CSS
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                MongoDB
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                PostgreSQL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Node.js
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Nest.js
+                MongoDB
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                MySQL
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
@@ -304,9 +306,9 @@ const AboutPage = () => {
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
+        {/* <div className="hidden xl:block w-1/3 sticky top-0 z-30 xl:w-1/2 pl-15">
           <Brain scrollYProgress={scrollYProgress} />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
