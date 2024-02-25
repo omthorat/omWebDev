@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "omkar_thorat_dev",
+=======
+  "name": "Omkar_thorat_Dev.",
+>>>>>>> 87c3dc195faf28affde4a586ce2b3a1e17b844b3
   "version": "0.1.0",
   "private": true,
   "scripts": {

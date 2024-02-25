@@ -16,8 +16,13 @@ const ContactPage = () => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
+<<<<<<< HEAD
     if(mesg.length >=5 && email.length >=5){
       emailjs
+=======
+   console.log("send")
+    emailjs
+>>>>>>> 87c3dc195faf28affde4a586ce2b3a1e17b844b3
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
@@ -77,7 +82,7 @@ const ContactPage = () => {
           <span>Dear Omkar Dev,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-3"
             name="user_message"
             onChange={(e)=>{setMesg(e.target.value)}}
             required
