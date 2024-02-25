@@ -30,7 +30,7 @@ const AboutPage = () => {
           {/* SUMMARY CONTAINER */}
           <div className="flex flex-row gap-8 justify-center">
             {/* SUMMARY IMAGE */}
-            <Image src="/profile.png" width={300} height={250} className="rounded-xl"/>
+            <Image src="/profile.png" width={400} height={450} className="rounded-xl"/>
             {/* SUMMARY TITLE */}
             <div className="flex flex-col gap-12">
             <h1 className="font-bold text-2xl">SUMMARY</h1>

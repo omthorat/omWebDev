@@ -6,16 +6,18 @@ import emailjs from "@emailjs/browser";
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [mesg,setMesg]=useState()
+  const [email,setEmail]=useState()
   const text = "Say Hello";
 
   const form = useRef();
-
+  console.log(mesg,email)
   const sendEmail = (e) => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
-
-    emailjs
+    if(mesg.length >=5 && email.length >=5){
+      emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
@@ -31,6 +33,11 @@ const ContactPage = () => {
           setError(true);
         }
       );
+    }
+    else{
+      setError(true)
+    }
+    
   };
 
   return (
@@ -65,19 +72,23 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-md lg:text-xl flex flex-col gap-8 justify-center p-12 lg:p-24"
         >
           <span>Dear Omkar Dev,</span>
           <textarea
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
+            onChange={(e)=>{setMesg(e.target.value)}}
+            required
           />
           <span>My mail address is:</span>
           <input
             name="user_email"
-            type="text"
+            type="email"
+            onChange={(e)=>{setEmail(e.target.value)}}
             className="bg-transparent border-b-2 border-b-black outline-none"
+            required
           />
           <span>Regards</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
@@ -90,7 +101,7 @@ const ContactPage = () => {
           )}
           {error && (
             <span className="text-red-600 font-semibold">
-              Something went wrong!
+             {mesg.length >=5 ?"Something went wrong!": "Message should be more specific!!"} 
             </span>
           )}
         </form>
