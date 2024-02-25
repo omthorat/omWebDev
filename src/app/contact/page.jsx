@@ -14,7 +14,7 @@ const ContactPage = () => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
-
+   console.log("send")
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -70,7 +70,7 @@ const ContactPage = () => {
           <span>Dear Omkar Dev,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-3"
             name="user_message"
           />
           <span>My mail address is:</span>
