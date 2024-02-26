@@ -28,14 +28,14 @@ const AboutPage = () => {
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-35 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:pr-0 ">
           {/* SUMMARY CONTAINER */}
-          <div className="flex flex-row gap-8 justify-center">
+          <div className="flex flex-col md:flex-row  gap-8 justify-center">
             {/* SUMMARY IMAGE */}
-            <Image src="/profile.png" width={400} height={450} className="rounded-xl"/>
+            <img src="/profile2..png"  className="rounded-xl object-contain mix-blend-overlay w-[400px] h-[400px]"/>
             {/* SUMMARY TITLE */}
-            <div className="flex flex-col gap-16 item-center m-5">
+            <div className="flex flex-col gap-8 md-gap-12 lg:gap-16 item-center m-5">
             <h1 className="font-bold text-2xl">SUMMARY</h1>
             {/* SUMMARY DESC */}
-            <p className="text-xl">
+            <p className="text-md lg:text-xl">
             Full Stack Software Developer with Expertise in  both frontend and backend development. Proven expertise in crafting end-to-end (e2e) applications, demonstrating a track record of successfully navigating the complexities of the software development lifecycle. Adept at collaborating with diverse teams to develop cross-functional applications that seamlessly integrate frontend and backend components. Experienced in leading small teams, fostering innovation, and ensuring the delivery of high-quality solutions.
             </p>
             </div>
@@ -288,6 +288,7 @@ const AboutPage = () => {
               </div>
             </motion.div>
           </div>
+          
         </div>
         {/* SVG CONTAINER */}
         {/* <div className="hidden xl:block w-1/3 sticky top-0 z-30 xl:w-1/2 pl-15">

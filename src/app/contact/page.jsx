@@ -50,7 +50,7 @@ const ContactPage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/3 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -89,6 +89,7 @@ const ContactPage = () => {
             type="email"
             onChange={(e)=>{setEmail(e.target.value)}}
             className="bg-transparent border-b-2 border-b-black outline-none"
+            multiple
             required
           />
           <span>Regards</span>
