@@ -80,17 +80,17 @@ const Navbar=()=>{
         </div>
 
         <div className="hidden md:flex flex-row justify-center gap-3 w-1/3">
-         <Link href="#">
+         <Link href="https://github.com/omthorat/" target="blank">
             <img src="/github.png" width={24} height={24}/>
          </Link>
-         <Link href="#">
+         <Link href="#" target="blank">
             <img src="/linkedin.png" width={24} height={24}/>
          </Link>
          <Link href="#">
             <img src="/instagram.png" width={24} height={24}/>
          </Link>
-         <Link href="#">
-            <img src="/hero.png" width={24} height={24}/>
+         <Link href="/" target="blank">
+            <img src="/home.svg" width={24} height={24}/>
          </Link>
 
 
