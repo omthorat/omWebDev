@@ -68,29 +68,29 @@ const Navbar=()=>{
        
        <div className="hidden md:flex flex-row gap-4  text-xl w-1/3 ">
         {
-            menu.map((link)=>(<Navlinks link={link}/>))
+            menu.map((link)=>(<Navlinks link={link} key={link.url}/>))
         }
        </div>
         <div className="md:hidden xl:flex">
         <Link href='/' className="text-sm  rounded-md px-2 pr-1 py-1 flex flex-row font-semibold ">
             {/* <span className="text-white text-lg flex items-center justify-center p-1">Omkar</span>
             <span className="bg-white rounded-md text-lg p-1">.Dev</span> */}
-            <Image src="/logo-removebg-preview (1).png" width={300} height={100}/>
+            <Image alt="img" src="/logo-removebg-preview (1).png" width={300} height={100}/>
             </Link>
         </div>
 
         <div className="hidden md:flex flex-row justify-center gap-3 w-1/3">
          <Link href="https://github.com/omthorat/" target="blank">
-            <img src="/github.png" width={24} height={24}/>
+            <Image alt="img" src="/github.png" width={24} height={24}/>
          </Link>
          <Link href="https://www.linkedin.com/in/omkar-thorat-5663671b0/" target="blank">
-            <img src="/linkedin.png" width={24} height={24}/>
+            <Image alt="img" src="/linkedin.png" width={24} height={24}/>
          </Link>
          <Link href="https://www.instagram.com/omkar_thorat832/?hl=en" target="blank">
-            <img src="/instagram.png" width={24} height={24}/>
+            <Image alt="img" src="/instagram.png" width={24} height={24}/>
          </Link>
          <Link href="/">
-            <img src="/home.svg" width={24} height={24}/>
+            <Image alt="img" src="/home.svg" width={24} height={24}/>
          </Link>
 
 

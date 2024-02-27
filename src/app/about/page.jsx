@@ -1,5 +1,4 @@
 "use client";
-import Brain from "../../components/Brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -30,7 +29,7 @@ const AboutPage = () => {
           {/* SUMMARY CONTAINER */}
           <div className="flex flex-col md:flex-row  gap-8 justify-center">
             {/* SUMMARY IMAGE */}
-            <img src="/hero.png"  className="rounded-xl object-contain mix-blend-overlay w-[500px] h-[400px]"/>
+            <img alt="img" src="/hero.png"   className="rounded-xl object-contain mix-blend-overlay w-[500px] h-[400px]"/>
             {/* SUMMARY TITLE */}
             <div className="flex flex-col gap-6 md-gap-8 xl:gap-10 2xl:gap-16 item-center justify-center  m-5">
             <h1 className="font-bold text-2xl">SUMMARY</h1>

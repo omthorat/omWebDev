@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-200">
-      <PagesAnimation children={children}/>
+      <PagesAnimation>{children}</PagesAnimation>
       </div>
       </body>
     </html>
