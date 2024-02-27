@@ -83,13 +83,13 @@ const Navbar=()=>{
          <Link href="https://github.com/omthorat/" target="blank">
             <img src="/github.png" width={24} height={24}/>
          </Link>
-         <Link href="#" target="blank">
+         <Link href="https://www.linkedin.com/in/omkar-thorat-5663671b0/" target="blank">
             <img src="/linkedin.png" width={24} height={24}/>
          </Link>
-         <Link href="#">
+         <Link href="https://www.instagram.com/omkar_thorat832/?hl=en" target="blank">
             <img src="/instagram.png" width={24} height={24}/>
          </Link>
-         <Link href="/" target="blank">
+         <Link href="/">
             <img src="/home.svg" width={24} height={24}/>
          </Link>
 
