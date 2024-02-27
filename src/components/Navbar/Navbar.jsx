@@ -75,7 +75,7 @@ const Navbar=()=>{
         <Link href='/' className="text-sm  rounded-md px-2 pr-1 py-1 flex flex-row font-semibold ">
             {/* <span className="text-white text-lg flex items-center justify-center p-1">Omkar</span>
             <span className="bg-white rounded-md text-lg p-1">.Dev</span> */}
-            <Image alt="img" src="/logo-removebg-preview (1).png" width={300} height={100}/>
+            <Image src="/logo-removebg-preview (1).png" alt="img" width={300} height={100}/>
             </Link>
         </div>
 
