@@ -26,7 +26,7 @@ const AboutPage = () => {
       {/* CONTAINER */}
       <div className="h-full overflow-y-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-35 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:pr-0 ">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-35 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 2xl:gap-90 lg:pr-0 ">
           {/* SUMMARY CONTAINER */}
           <div className="flex flex-col md:flex-row  gap-8 justify-center">
             {/* SUMMARY IMAGE */}
