@@ -14,29 +14,38 @@ const ContactPage = () => {
   console.log(mesg,email)
   const sendEmail = (e) => {
     e.preventDefault();
-    setError(false);
-    setSuccess(false);
+    // setError(false);
+    // setSuccess(false);
 
     if(mesg.length >=5 && email.length >=5){
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        "service_8q7taka",
+        "template_ef36jby",
         form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        "jLMWVGUykkg1HzRhJ",
       )
       .then(
         () => {
           setSuccess(true);
           form.current.reset();
+          setTimeout(()=>{
+            setSuccess(false);
+          },2000)
         },
         () => {
           setError(true);
+          setTimeout(()=>{
+            setError(false)
+          },2000)
         }
       );
     }
     else{
       setError(true)
+      setTimeout(()=>{
+        setError(false)
+      },2000)
     }
     
   };
@@ -50,7 +59,7 @@ const ContactPage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 ">
         {/* TEXT CONTAINER */}
-        <div className="h-1/3 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -78,7 +87,8 @@ const ContactPage = () => {
           <span>Dear Omkar Dev,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-4"
+            cols={6}
+            className=" border-b-2 border-b-black outline-none resize-none p-4"
             name="user_message"
             onChange={(e)=>{setMesg(e.target.value)}}
             required
@@ -96,7 +106,7 @@ const ContactPage = () => {
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
             Send
           </button>
-          {success && (
+          {success &&  (
             <span className="text-green-600 font-semibold">
               Your message has been sent successfully!
             </span>
