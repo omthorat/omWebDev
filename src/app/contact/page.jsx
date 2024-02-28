@@ -11,11 +11,8 @@ const ContactPage = () => {
   const text = "Say Hello";
 
   const form = useRef();
-  console.log(mesg,email)
   const sendEmail = (e) => {
     e.preventDefault();
-    // setError(false);
-    // setSuccess(false);
 
     if(mesg.length >=5 && email.length >=5){
     emailjs
@@ -82,13 +79,13 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-md lg:text-xl flex flex-col gap-8 justify-center p-12 lg:p-16 xl:p-18 2xl:p-22"
+          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-md lg:text-xl flex flex-col gap-6 justify-center p-12 lg:p-16 xl:p-18 2xl:p-22"
         >
           <span>Dear Omkar Dev,</span>
           <textarea
             rows={6}
             cols={6}
-            className=" border-b-2 border-b-black outline-none resize-none p-4"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-2 "
             name="user_message"
             onChange={(e)=>{setMesg(e.target.value)}}
             required
