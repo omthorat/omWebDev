@@ -90,7 +90,7 @@ const Navbar=()=>{
             <Image alt="img" src="/instagram.png" width={24} height={24}/>
          </Link>
          <Link href="/">
-            <Image alt="img" src="/home.svg" width={24} height={24}/>
+            <Image alt="img" src="/photo.png" width={24} height={24}/>
          </Link>
 
 
