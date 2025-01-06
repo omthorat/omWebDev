@@ -9,37 +9,37 @@ const items = [
     id: 1,
     color: "from-red-300 to-blue-300",
     title: "File Uploading in MERN stack",
-    desc: "this project contains USER registeration, Authorization, with JWT Tokens. file uploding ,file deleteing and file updating all functionalities are present there in this project. Build in MERN STACK. ",
+    desc: "This project features user registration, authorization with JWT tokens, and complete file operations such as uploading, deleting, and updating. Built using the MERN stack.",
     img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     link: "https://github.com/omthorat/Usersauth-file-uploading-and-deleting",
-    linktype:"Github Link"
+    linktype: "Github Link",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "React TextUtiles App",
-    desc: "This project contains diffrent pages for routing, Main part is we can use it As TEXT EDITOR which contain all the functionalites that are requried for text editing.also contain diffrent mode for better visual effect",
+    title: "React Text Utilities App",
+    desc: "This text editor app includes routing, multiple text editing features, and visual modes for better usability.",
     img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     link: "https://textutilesweb.netlify.app/",
-    linktype:"See Demo"
+    linktype: "See Demo",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "Soacial Media app MERN stack",
-    desc: "MERN Social is a full-stack social media application designed to connect users through posts, comments, and interactions. Users can register, create posts, comment on posts, and engage with other users' content.",
+    title: "Social Media App (MERN Stack)",
+    desc: "A full-stack social media app for user interaction through posts, comments, and content engagement.",
     img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     link: "https://github.com/omthorat/socialmediaMERNstack",
-    linktype:"Git Link"
+    linktype: "Git Link",
   },
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "React Loan Application Mangagement App",
-    desc: "Developed loan application app, End to end, Handled the Database, created a responsive front-end in Reactjs",
+    title: "React Loan Application Management App",
+    desc: "Developed a responsive loan application management system using React.js with robust database handling.",
     img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "https://github.com/omthorat/loan-project",
-    linktype:"Github Link"
+    linktype: "Github Link",
   },
 ];
 
@@ -51,71 +51,71 @@ const PortfolioPage = () => {
 
   return (
     <motion.div
-      className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
-    >
-      <div className="h-[600vh] relative " ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)]  flex items-center justify-center text-8xl text-center">
-          My Works
-        </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300 " />
+      className="min-h-screen bg-gradient-to-r from-gray-100 to-gray-300"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}>
+      <header className="w-full py-10 text-center bg-gradient-to-b from-blue-50 to-red-200 text-black">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          Welcome to My Portfolio
+        </h1>
+        <p className="mt-4 text-xl md:text-2xl">
+          Showcasing my best work and creativity.
+        </p>
+      </header>
+
+      <main ref={ref} className="relative">
+        <section className="py-20">
+          <div className="container px-2 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
             {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center p-3 bg-gradient-to-r ${item.color}`}
+              <motion.div
                 key={item.id}
-              >
-                <div className="flex flex-col gap-4 2xl:gap-10 text-white">
-                  <h1 className="text-lg font-bold md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[400px] lg:h-[250px] xl:w-[600px] xl:h-[320px] 2xl:h-[350px]">
-                    <Image src={item.img} alt="" fill />
-                  </div>
-                  <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[700px] xl:text-xl ">
-                    {item.desc}
-                  </p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-3 text-sm md:px-3 md:text-md lg:px-4 2xl:p-5 bg-white text-gray-600 font-semibold rounded">{item.linktype}</button>
-                  </Link>
+                className={`p-6 rounded-xl shadow-lg bg-gradient-to-r ${item.color} transform hover:scale-105 transition-transform`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}>
+                <h2 className="text-2xl font-bold text-white">{item.title}</h2>
+                <div className="relative mt-4 w-full h-48 rounded-lg overflow-hidden">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    objectFit="cover"
+                  />
                 </div>
-              </div>
+                <p className="mt-4 text-white">{item.desc}</p>
+                <Link
+                  href={item.link}
+                  className="inline-block mt-4 py-2 px-6 bg-white text-gray-700 font-semibold rounded hover:bg-gray-100 transition"
+                  target="_blank">
+                  {item.linktype}
+                </Link>
+              </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </div>
-      <div className="w-screen h-screen flex flex-col gap-18 items-center justify-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
-        <div className="relative">
-          <motion.svg
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, ease: "linear", repeat: Infinity }}
-            viewBox="0 0 300 300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px] "
-          >
-            <defs>
-              <path
-                id="circlePath"
-                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-              />
-            </defs>
-            <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
-              </textPath>
-            </text>
-          </motion.svg>
-          <Link
-            href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
-          >
-            Hire Me
-          </Link>
-        </div>
-      </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-to-b flex flex-col justify-center md:flex-row align-item-center gap-3 from-blue-50 to-red-200 text-black text-center">
+          <div>
+            <h2 className="text-4xl font-bold mt-3">Have a Project in Mind?</h2>
+            <p className="mt-4 text-xl">
+              Let&apos;s work together and bring your ideas to life.
+            </p>
+          </div>
+          <div className="text-center flex justify-center">
+            <Link
+              href="/contact"
+              className="w-16 h-16 md:w-28 md:h-28 flex-2  bg-black text-white rounded-full flex items-center justify-center">
+              Hire Me
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <footer className="py-10 bg-gray-900 text-gray-400 text-center">
+        <p>&copy; 2025 Omkar Thorat. All rights reserved.</p>
+      </footer>
     </motion.div>
   );
 };
