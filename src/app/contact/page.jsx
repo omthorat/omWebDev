@@ -108,27 +108,28 @@ const ContactPage = () => {
         </form>
 
         {/* Contact Info */}
-        <div className="mt-12 lg:mt-0 lg:ml-12 w-full lg:w-1/2 text-center lg:text-left">
+        <div className="mt-12 mb-4  lg:mt-0 lg:ml-12 w-full lg:w-1/2 text-left lg:text-left">
           <h2 className="text-2xl font-semibold mb-6">
             Other Ways to Reach Me
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-2">
             <li>
-              <span className="font-semibold">Email:</span> omkardev@example.com
+              <span className="font-semibold">Email:</span>{" "}
+              omkarthorat832@gmail.com
             </li>
             <li>
-              <span className="font-semibold">Phone:</span> +123 456 7890
+              <span className="font-semibold">Phone:</span> +91 7350260890
             </li>
             <li>
-              <span className="font-semibold">Location:</span> City, Country
+              <span className="font-semibold">Location:</span> Pune, India
             </li>
           </ul>
-          <div className="mt-8 flex justify-center lg:justify-start space-x-6">
+          <div className="mt-8  flex justify-start lg:justify-start space-x-6">
             <a
               href="https://github.com/yourprofile"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
+              className="bg-white text-gray-800 p-4  rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
               GitHub
             </a>
             <a
