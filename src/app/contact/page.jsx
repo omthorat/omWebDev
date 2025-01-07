@@ -55,8 +55,8 @@ const ContactPage = () => {
       <header className="text-center py-12">
         <h1 className="text-4xl lg:text-5xl font-bold">Get In Touch</h1>
         <p className="mt-4 text-lg">
-          I'd love to hear from you! Whether it's a project, question, or just
-          to say hi.
+          I&apos;d love to hear from you! Whether it&apos;s a project, question,
+          or just to say hi.
         </p>
       </header>
 

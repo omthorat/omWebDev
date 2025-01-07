@@ -29,11 +29,11 @@ const Homepage = () => {
             Hi, I’m Omkar, a Full Stack Developer with a knack for building
             efficient, scalable, and user-friendly web applications. With
             expertise in the MERN stack, real-time applications, and AI-driven
-            projects, I transform ideas into digital realities. Whether it's
-            crafting intuitive UI/UX, optimizing backend workflows, or exploring
-            AI/ML-powered innovations, I’m here to bring your vision to life.
-            Let’s collaborate to create solutions that not only work but leave a
-            lasting impact!
+            projects, I transform ideas into digital realities. Whether
+            it&apos;s crafting intuitive UI/UX, optimizing backend workflows, or
+            exploring AI/ML-powered innovations, I’m here to bring your vision
+            to life. Let’s collaborate to create solutions that not only work
+            but leave a lasting impact!
           </motion.p>
           <div className="flex space-x-4 mt-4">
             <Link href="/portfolio">
@@ -56,7 +56,7 @@ const Homepage = () => {
             alt="Digital Creativity Illustration"
             width={400}
             height={400}
-            className="rounded-lg bg-white shadow-lg"
+            className="rounded-full bg-white shadow-lg"
           />
         </div>
       </section>

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const AboutPage = () => {
   const containerVariants = {
@@ -136,7 +136,8 @@ const AboutPage = () => {
             ensuring seamless integration of frontend and backend components.
           </p>
           <blockquote className="text-red-500 italic">
-            "Passion fuels my code, and innovation drives my solutions."
+            &quot;Passion fuels my code, and innovation drives my
+            solutions.&quot;
           </blockquote>
         </div>
       </motion.section>
