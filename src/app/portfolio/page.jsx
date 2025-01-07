@@ -8,38 +8,63 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
+    title: "Lab Labelling System",
+    desc: [
+      "• Frontend Development using React.js, Es6, Material UI for creating interactive, intuitive, and responsive UI.",
+      "• Streamlined GraphQL APIs for efficient querying and minimized data over-fetching.",
+      "• Developed customizable label creation and printing features, optimizing workflows to save users 2 hours daily.",
+      "• Enhanced labels with dynamic textboxes, barcode generation, rich icon library, and precision tools for advanced customization.",
+    ],
+    img: "/lab.jpg",
+    link: "#",
+    linktype: "Client Project",
+  },
+  {
+    id: 2,
+    color: "from-red-300 to-blue-300",
+    title: "Loan application portal",
+    desc: [
+      "• Frontend Developed using React Js for seamless User Interface.",
+      "• Backend Implementation Built Using Node.Js and Express.Js to Handle API Integration and DB Connection.",
+      "• Database Management Utilized MongoDB as a database for storing and managing people All information.",
+    ],
+    img: "/loanimg.avif",
+    link: "#",
+    linktype: "Client Project",
+  },
+  {
+    id: 3,
+    color: "from-red-300 to-blue-300",
     title: "File Uploading in MERN stack",
-    desc: "This project features user registration, authorization with JWT tokens, and complete file operations such as uploading, deleting, and updating. Built using the MERN stack.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: [
+      "This project features user registration, authorization with JWT tokens, and complete file operations such as uploading, deleting, and updating. Built using the MERN stack.",
+    ],
+    img: "/fileupload.jpg",
     link: "https://github.com/omthorat/Usersauth-file-uploading-and-deleting",
     linktype: "Github Link",
   },
   {
-    id: 2,
+    id: 4,
     color: "from-blue-300 to-violet-300",
     title: "React Text Utilities App",
-    desc: "This text editor app includes routing, multiple text editing features, and visual modes for better usability.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: [
+      "This text editor app includes routing, multiple text editing features, and visual modes for better usability.",
+      " This include feature like makeing string upper case , measuring typing speed , word count, changing font size and etc..",
+    ],
+    img: "/textu.png",
     link: "https://textutilesweb.netlify.app/",
     linktype: "See Demo",
   },
   {
-    id: 3,
+    id: 5,
     color: "from-violet-300 to-purple-300",
     title: "Social Media App (MERN Stack)",
-    desc: "A full-stack social media app for user interaction through posts, comments, and content engagement.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: [
+      "A full-stack social media app for user interaction through posts, comments, and content engagement.",
+    ],
+    img: "/social.jpg",
     link: "https://github.com/omthorat/socialmediaMERNstack",
     linktype: "Git Link",
-  },
-  {
-    id: 4,
-    color: "from-purple-300 to-red-300",
-    title: "React Loan Application Management App",
-    desc: "Developed a responsive loan application management system using React.js with robust database handling.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://github.com/omthorat/loan-project",
-    linktype: "Github Link",
   },
 ];
 
@@ -66,7 +91,7 @@ const PortfolioPage = () => {
 
       <main ref={ref} className="relative">
         <section className="py-20">
-          <div className="container px-2 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="container px-2 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
             {items.map((item) => (
               <motion.div
                 key={item.id}
@@ -84,7 +109,14 @@ const PortfolioPage = () => {
                     objectFit="cover"
                   />
                 </div>
-                <p className="mt-4 text-white">{item.desc}</p>
+                <p className="mt-4 text-white">
+                  {Array.isArray(item.desc) ? (
+                    item.desc.map((dec, i) => <span key={i}>{dec}</span>)
+                  ) : (
+                    <span>{item.desc || "No description available"}</span>
+                  )}
+                </p>
+
                 <Link
                   href={item.link}
                   className="inline-block mt-4 py-2 px-6 bg-white text-gray-700 font-semibold rounded hover:bg-gray-100 transition"

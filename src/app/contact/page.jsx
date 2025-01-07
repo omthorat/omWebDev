@@ -126,14 +126,14 @@ const ContactPage = () => {
           </ul>
           <div className="mt-8  flex justify-start lg:justify-start space-x-6">
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/omthorat/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-gray-800 p-4  rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/omkar-thorat832/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
