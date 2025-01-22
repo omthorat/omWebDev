@@ -59,9 +59,9 @@ const Navbar = () => {
 
   const menu = [
     { url: "/", title: "Home" },
-    { url: "about", title: "About" },
+    { url: "about", title: "About Me" },
     { url: "portfolio", title: "Portfolio" },
-    { url: "contact", title: "Contact" },
+    { url: "contact", title: "Contact Me" },
   ];
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 xlg:px-48 ">

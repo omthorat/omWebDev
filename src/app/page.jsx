@@ -140,7 +140,7 @@ const Homepage = () => {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold">What People Are Saying</h2>
         </div>
-        <div className="flex justify-center gap-8 px-6 sm:px-12 lg:px-24">
+        <div className="flex-col flex md:flex-row justify-center gap-8 px-6 sm:px-12 lg:px-24">
           {[
             {
               feedback:
